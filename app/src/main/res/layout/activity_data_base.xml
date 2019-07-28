@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataBaseActivity">
+
+    <EditText
+        android:id="@+id/database_submit_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="点击删除，长按修改数据"
+        app:layout_constraintEnd_toStartOf="@+id/database_submit_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" android:inputType=""  />
+
+    <Button
+        android:id="@+id/database_submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:text="添加"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/database_search_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="输入查询的id"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/database_search_btn"
+        app:layout_constraintStart_toStartOf="@+id/database_submit_et"
+        app:layout_constraintTop_toBottomOf="@+id/database_submit_et" />
+
+    <Button
+        android:id="@+id/database_search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="搜索"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/database_submit_btn" />
+
+    <Button
+        android:id="@+id/database_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="删除所有"
+        app:layout_constraintStart_toStartOf="@+id/database_search_et"
+        app:layout_constraintTop_toBottomOf="@+id/database_search_et" />
+
+    <Button
+        android:id="@+id/database_show_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="显示所有"
+        app:layout_constraintStart_toEndOf="@+id/database_delete_btn"
+        app:layout_constraintTop_toBottomOf="@+id/database_search_et" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/database_recycleview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/database_show_btn" />
+
+    <CheckBox
+        android:id="@+id/database_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="选中使用sql"
+        app:layout_constraintBottom_toBottomOf="@+id/database_show_btn"
+        app:layout_constraintStart_toEndOf="@+id/database_show_btn"
+        app:layout_constraintTop_toTopOf="@+id/database_show_btn" />
+</android.support.constraint.ConstraintLayout>
