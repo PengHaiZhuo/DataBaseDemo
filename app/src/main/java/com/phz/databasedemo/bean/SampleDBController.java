@@ -18,7 +18,7 @@ public class SampleDBController{
 
     public SampleDBController(Context context) {
         SampleManagerDBOpenHelper dbOpenHelper=new SampleManagerDBOpenHelper(context,DB_NAME,null,VERSION);
-        db=dbOpenHelper.getWritableDatabase();
+        db=dbOpenHelper.getWritableDatabase();//在调用{@link #getWritableDatabase}或{@link #getReadableDatabase}中的一个之前，实际上不会创建或打开数据库。
     }
 
     public void dbClose(){
