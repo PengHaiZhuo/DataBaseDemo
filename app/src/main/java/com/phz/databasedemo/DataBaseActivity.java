@@ -73,7 +73,6 @@ public class DataBaseActivity extends DataBaseBaseActivity {
 
     @Override
     public void insertData(Sample s) {
-        super.insertData(s);
         dbController=new SampleDBController(this);//为什么每个方法需要调用新建呢，因为每次调用都关闭了SQLiteDatabase。题外话：此外多线程操作操作数据库报错。
         if (s == null) {
             for (int i = 0; i < 1000; i++) {

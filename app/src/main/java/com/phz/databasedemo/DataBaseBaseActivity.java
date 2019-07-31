@@ -124,9 +124,7 @@ public abstract class DataBaseBaseActivity extends AppCompatActivity {
         unbinder.unbind();
     }
 
-    public void insertData(Sample s) {
-        mDataBaseAdapter.addSampleData(s);
-    }
+    public abstract void insertData(Sample s);
 
     public abstract void deleteAll();
 
